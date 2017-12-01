@@ -2,14 +2,14 @@ const React = novi.react.React;
 import Trigger from "./editor/Trigger";
 import Body from "./editor/Body";
 const Icons = novi.ui.icons;
-
+const messages = novi.language.getDataByKey("novi-plugin-rd-instafeed");
 const EditorItem = {
     trigger: <Trigger/>,
-    tooltip: "Instagram settings",
-    header: [Icons.ICON_INSTAGRAM, <span>Instagram Settings</span>],
+    tooltip: messages.editor.tooltip,
+    header: [Icons.ICON_INSTAGRAM, <span>{messages.editor.header}</span>],
     body: [<Body/>],
     closeIcon: "submit",
-    title: "Change instagram setting",
+    title: messages.editor.title,
     onSubmit: onSubmitAction,
     width: 294,
     height: 170
